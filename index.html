@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js"></script>
+  <script type="text/javascript">
+
+
+
+
+  <!--
+
+  var rand_img = 0;
+  var useRand = 0;
+
+  images = new Array();
+
+  images[1] = new Image();
+  images[1].src = "Frontcard/1.png";
+
+  images[2] = new Image();
+  images[2].src = "Frontcard/2.png";
+
+  images[3] = new Image();
+  images[3].src = "Frontcard/3.png";
+
+  images[4] = new Image();
+  images[4].src = "Frontcard/4.png";
+
+  images[5] = new Image();
+  images[5].src = "Frontcard/5.png";
+
+  images[6] = new Image();
+  images[6].src = "Frontcard/6.png";
+
+  images[7] = new Image();
+  images[7].src = "Frontcard/7.png";
+
+  images[8] = new Image();
+  images[8].src = "Frontcard/8.png";
+
+  images[9] = new Image();
+  images[9].src = "Frontcard/9.png";
+
+  images[10] = new Image();
+  images[10].src = "Frontcard/10.png";
+
+  images[11] = new Image();
+  images[11].src = "Frontcard/11.png";
+
+  images[12] = new Image();
+  images[12].src = "Frontcard/12.png";
+
+  images[13] = new Image();
+  images[13].src = "Frontcard/13.png";
+
+  images[14] = new Image();
+  images[14].src = "Frontcard/14.png";
+
+  images[15] = new Image();
+  images[15].src = "Frontcard/15.png";
+
+  images[16] = new Image();
+  images[16].src = "Frontcard/16.png";
+
+  images[17] = new Image();
+  images[17].src = "Frontcard/17.png";
+
+  images[18] = new Image();
+  images[18].src = "Frontcard/18.png";
+
+  images[19] = new Image();
+  images[19].src = "Frontcard/19.png";
+
+  images[20] = new Image();
+  images[20].src = "Frontcard/20.png";
+
+  images[21] = new Image();
+  images[21].src = "Frontcard/21.png";
+
+  images[22] = new Image();
+  images[22].src = "Frontcard/22.png";
+
+  images[23] = new Image();
+  images[23].src = "Frontcard/23.png";
+
+  images[24] = new Image();
+  images[24].src = "Frontcard/24.png";
+
+
+
+  images[26] = new Image();
+  images[26].src = "Frontcard/26.png";
+
+  images[27] = new Image();
+  images[27].src = "Frontcard/27.png";
+
+  images[28] = new Image();
+  images[28].src = "Frontcard/28.png";
+
+  images[29] = new Image();
+  images[29].src = "Frontcard/29.png";
+
+  images[30] = new Image();
+  images[30].src = "Frontcard/30.png";
+
+  images[31] = new Image();
+  images[31].src = "Frontcard/31.png";
+
+  images[32] = new Image();
+  images[32].src = "Frontcard/32.png";
+
+  images[33] = new Image();
+  images[33].src = "Frontcard/33.png";
+
+  images[34] = new Image();
+  images[34].src = "Frontcard/34.png";
+
+  images[35] = new Image();
+  images[35].src = "Frontcard/35.png";
+
+  images[36] = new Image();
+  images[36].src = "Frontcard/36.png";
+
+  images[37] = new Image();
+  images[37].src = "Frontcard/37.png";
+
+
+
+  images[39] = new Image();
+  images[39].src = "Frontcard/39.png";
+
+  images[40] = new Image();
+  images[40].src = "Frontcard/40.png";
+
+  images[41] = new Image();
+  images[41].src = "Frontcard/41.png";
+
+  images[42] = new Image();
+  images[42].src = "Frontcard/42.png";
+
+
+
+  images[44] = new Image();
+  images[44].src = "Frontcard/44.png";
+
+  images[45] = new Image();
+  images[45].src = "Frontcard/45.png";
+
+  images[46] = new Image();
+  images[46].src = "Frontcard/46.png";
+
+  images[47] = new Image();
+  images[47].src = "Frontcard/47.png";
+
+  images[48] = new Image();
+  images[48].src = "Frontcard/48.png";
+
+  images[49] = new Image();
+  images[49].src = "Frontcard/49.png";
+
+  images[50] = new Image();
+  images[50].src = "Frontcard/50.png";
+
+  images[51] = new Image();
+  images[51].src = "Frontcard/51.png";
+
+  images[52] = new Image();
+  images[52].src = "Frontcard/52.png";
+
+  images[53] = new Image();
+  images[53].src = "Frontcard/53.png";
+
+  images[54] = new Image();
+  images[54].src = "Frontcard/54.png";
+
+  images[55] = new Image();
+  images[55].src = "Frontcard/55.png";
+
+  images[56] = new Image();
+  images[56].src = "Frontcard/56.png";
+
+  images[57] = new Image();
+  images[57].src = "Frontcard/57.png";
+
+  images[58] = new Image();
+  images[58].src = "Frontcard/58.png";
+
+  images[59] = new Image();
+  images[59].src = "Frontcard/59.png";
+
+  images[60] = new Image();
+  images[60].src = "Frontcard/60.png";
+
+
+
+  function SwapPic()
+  {
+      var imgNum = images.length-1;
+
+      do
+      {
+          var randNum = Math.random();
+
+          rand_img = Math.round((imgNum-1) * randNum) + 1;
+
+
+
+      }
+      while (rand_img == useRand);
+
+
+      useRand = rand_img;
+
+      document.random_img.src = images[useRand].src;
+  }
+
+//이미지 클릭시 숨기기
+  function hide_image (id) {
+          document.getElementById (id) .style.visibility = 'hidden';
+      }
+
+//모달창 (상점)
+function drag(target, shop) {       //드래그 시작시 호출 할 함수
+    shop.dataTransfer.setData('Text', target.id);
+};
+function drop(target, shop) {       //드롭시 호출 할 함수
+    var id = shop.dataTransfer.getData('Text');
+    target.appendChild(document.getElementById(id));
+    shop.preventDefault();
+};
+  //-->
+  </script>
+
+  <style>
+
+    #wrap {margin-top:50px;}
+
+    body{
+      background-image : url('backimg.png');
+      background-repeat: no-repeat;
+      background-size: 100vw 100vh;}
+
+    section{
+
+      width:5%;
+      height:800px;
+
+      float:left;}
+.sectionBox{
+  margin-top : 125px;
+  width:100%;
+  height:490px;
+
+  position: relative;
+}
+    .section2{
+
+      width:5%;
+      height:800px;
+      float:left;}
+
+    .menu{
+      clear:both;
+      width: 100%;
+      height: 5%;
+      }
+
+    .CardTable{
+      width:65%;
+      height:730px;
+
+      float:left;
+      padding-top: 70px;
+    }
+
+    .CardBox{
+      margin-top:100px;
+      margin-left:50px;
+      width:380px;
+      height:650px;
+
+      float:left;
+    }
+
+    .imgMargin{margin-bottom:20px;
+               margin-left:30px;
+             width : 87px;
+             height : 150px;}
+
+  .imgMargin:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ffffff;
+}
+
+.imgMargin:hover {
+  color: #ffffff;
+  box-shadow: 0 0 15px #ffffff;
+  text-shadow: 0 0 15px #ffffff;
+}
+img {
+
+  text-align: center;
+  line-height: 63px;
+
+  font-size: 30px;
+  color: #666;
+  transition: .5s;
+}
+
+img::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.white_content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.white_content:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.white_content > div {
+
+	width: 512px;
+	height: 900px;
+	border: 2px solid white;
+	background-image: url('shop.png');
+  background-color: black;
+	overflow: auto;
+  display: block;
+  margin: auto;
+}
+
+
+.cancle{width: 40px; height: 40px; float: right; margin-right:40px;}
+
+div.modals {
+  width:  420px;
+	height: 150px;
+	margin: 20px;
+	padding: 20px;
+
+}
+div.modals2 {
+  width:  420px;
+	height: 270px;
+	margin: 20px;
+	padding: 20px;
+
+}
+.sb {
+  height: 144px;
+  width: 220px;
+
+  position: fixed;
+  top : 84.5% ;
+  left : 31.5% ;
+}
+.sb2 {
+
+  height: 425px;
+  width: 40px;
+
+  margin-left: 20px;
+  margin-right: 20px;
+  position: absolute;
+  left: 7px;
+  top: 30px;
+
+}
+.sb3 {
+  height: 34px;
+  width: 40px;
+  margin-top:5px;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+}
+.CardBox img {
+  width : 380px;
+  height : 650px;
+}
+.sideV {
+  width: 100%;
+}
+
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) {
+  .CardBox{
+    margin-top:225px;
+    margin-left:30px;
+    width:280px;
+    height:480px;
+
+    float:left;
+  }
+ .CardBox img {
+   width :280px;
+   height: 480px;
+ }
+ .imgMargin{margin-bottom:40px;
+            margin-left:7px;
+          width : 75px;
+          height : 128px;}
+  .CardTable{
+        width:65%;
+        height:670px;
+
+        float:left;
+        padding-top: 130px;
+      }
+      section{
+
+        width:5%;
+        height:800px;
+
+        float:left;}
+  .sectionBox{
+    margin-top : 250px;
+    width:100%;
+    height:490px;
+
+    position: relative;
+  }
+      .section2{
+        
+        width:5%;
+        height:800px;
+        float:left;}
+
+      .sb {
+        height: 120px;
+        width: 183px;
+
+        position: fixed;
+        top : 88% ;
+        left : 30.9% ;
+      }
+      .sb2 {
+
+        height: 425px;
+        width: 40px;
+
+        margin-left: 20px;
+        margin-right: 20px;
+        position: absolute;
+        left: 3px;
+        top: 30px;
+
+      }
+      .sb3 {
+        height: 21px;
+        width: 25px;
+        margin-top:3px;
+
+      }
+      .white_content {
+          position: fixed;
+          padding-top : 60px;
+          background: rgba(0, 0, 0, 0.8);
+          opacity:0;
+          -webkit-transition: opacity 400ms ease-in;
+          -moz-transition: opacity 400ms ease-in;
+          transition: opacity 400ms ease-in;
+          pointer-events: none;
+      }
+
+}
+  </style>
+
+</head>
+<body>
+
+  <div id="wrap">
+
+      <section>
+          <div class ='sectionBox'>
+            <img src ='side.png' / width="100%">
+ <div class="sb2">
+<a href="#" onclick="document.getElementById('test').src='death.png'; return false;"><img src="ji.png" / class = 'sb3' id="test"></a>
+<a href="#" onclick="document.getElementById('test1').src='death.png'; return false;"><img src="ji.png" / class = 'sb3' id="test1"></a>
+<a href="#" onclick="document.getElementById('test2').src='death.png'; return false;"><img src="ji.png" / class = 'sb3' id="test2"></a>
+<a href="#" onclick="document.getElementById('test3').src='death.png'; return false;"><img src="ji.png" / class = 'sb3' id="test3"></a>
+<a href="#" onclick="document.getElementById('test4').src='death.png'; return false;"><img src="ji.png" / class = 'sb3' id="test4"></a>
+<a href="#" onclick="document.getElementById('test5').src='death.png'; return false;"><img src="ji.png" / class = 'sb3' id="test5"></a>
+<a href="#" onclick="document.getElementById('test6').src='death.png'; return false;"><img src="ji.png" / class = 'sb3' id="test6"></a>
+<a href="#" onclick="document.getElementById('test7').src='death.png'; return false;"><img src="ji.png" / class = 'sb3' id="test7"></a>
+<a href="#" onclick="document.getElementById('test8').src='death.png'; return false;"><img src="ji.png" / class = 'sb3' id="test8"></a>
+<a href="#" onclick="document.getElementById('test9').src='death.png'; return false;"><img src="ji.png" / class = 'sb3' id="test9"></a>
+
+ </div>
+</div>
+
+      </section>
+
+       <div class="CardTable">
+      <img  id="1" class="imgMargin"  onClick="hide_image('1'),SwapPic()" src="card/1.jpg" >
+      <img id="2" class="imgMargin" onClick="hide_image('2'),SwapPic()" src="card/1.jpg" >
+      <img id="3" class="imgMargin" onClick="hide_image('3'),SwapPic()" src="card/1.jpg" >
+      <img id="4" class="imgMargin" onClick="hide_image('4'),SwapPic()" src="card/1.jpg" >
+      <img id="5" class="imgMargin" onClick="hide_image('5'),SwapPic()" src="card/1.jpg" >
+      <img id="6" class="imgMargin" onClick="hide_image('6'),SwapPic()"src="card/1.jpg" >
+      <img id="7" class="imgMargin" onClick="hide_image('7'),SwapPic()" src="card/1.jpg" >
+      <img id="8" class="imgMargin" onClick="hide_image('8'),SwapPic()" src="card/1.jpg" >
+      <img id="9" class="imgMargin" onClick="hide_image('9'),SwapPic()" src="card/1.jpg" >
+      <img id="10" class="imgMargin" onClick="hide_image('10'),SwapPic()" src="card/1.jpg" >
+      <img id="11" class="imgMargin" onClick="hide_image('11'),SwapPic()"src="card/1.jpg">
+      <img id="12" class="imgMargin" onClick="hide_image('12'),SwapPic()"src="card/1.jpg" >
+      <img id="13" class="imgMargin" onClick="hide_image('13'),SwapPic()"src="card/1.jpg" >
+      <img id="14" class="imgMargin" onClick="hide_image('14'),SwapPic()"src="card/1.jpg" >
+      <img id="15" class="imgMargin" onClick="hide_image('15'),SwapPic()"src="card/1.jpg" >
+      <img id="16" class="imgMargin" onClick="hide_image('16'),SwapPic()"src="card/1.jpg" >
+      <img id="17" class="imgMargin" onClick="hide_image('17'),SwapPic()"src="card/1.jpg" >
+      <img id="18" class="imgMargin" onClick="hide_image('18'),SwapPic()"src="card/1.jpg" >
+      <img id="19" class="imgMargin" onClick="hide_image('19'),SwapPic()"src="card/1.jpg" >
+      <img id="20" class="imgMargin" onClick="hide_image('20'),SwapPic()"src="card/1.jpg" >
+      <img id="21" class="imgMargin" onClick="hide_image('21'),SwapPic()"src="card/1.jpg" >
+      <img id="22" class="imgMargin" onClick="hide_image('22'),SwapPic()"src="card/1.jpg" >
+      <img id="23" class="imgMargin" onClick="hide_image('23'),SwapPic()"src="card/1.jpg" >
+      <img id="24" class="imgMargin" onClick="hide_image('24'),SwapPic()"src="card/1.jpg" >
+      <img id="25" class="imgMargin" onClick="hide_image('25'),SwapPic()"src="card/1.jpg" >
+      <img id="26" class="imgMargin" onClick="hide_image('26'),SwapPic()"src="card/1.jpg" >
+      <img id="27" class="imgMargin" onClick="hide_image('27'),SwapPic()"src="card/1.jpg" >
+      <img id="28" class="imgMargin" onClick="hide_image('28'),SwapPic()"src="card/1.jpg" >
+      <img id="29" class="imgMargin" onClick="hide_image('29'),SwapPic()"src="card/1.jpg" >
+      <img id="30" class="imgMargin" onClick="hide_image('30'),SwapPic()"src="card/1.jpg" >
+      <img id="31" class="imgMargin" onClick="hide_image('31'),SwapPic()"src="card/1.jpg" >
+      <img id="32" class="imgMargin" onClick="hide_image('32'),SwapPic()"src="card/1.jpg" >
+      <img id="33" class="imgMargin" onClick="hide_image('33'),SwapPic()"src="card/1.jpg" >
+      <img id="34" class="imgMargin" onClick="hide_image('34'),SwapPic()"src="card/1.jpg" >
+      <img id="35" class="imgMargin" onClick="hide_image('35'),SwapPic()"src="card/1.jpg" >
+      <img id="36" class="imgMargin" onClick="hide_image('36'),SwapPic()"src="card/1.jpg" >
+      <img id="37" class="imgMargin" onClick="hide_image('37'),SwapPic()"src="card/1.jpg" >
+      <img id="38" class="imgMargin" onClick="hide_image('38'),SwapPic()"src="card/1.jpg" >
+      <img id="39" class="imgMargin" onClick="hide_image('39'),SwapPic()"src="card/1.jpg" >
+      <img id="40" class="imgMargin" onClick="hide_image('40'),SwapPic()"src="card/1.jpg" >
+         </div>
+
+      <div class="section2">
+        <div class ='sectionBox'>
+
+  <img src ='side.png' / class= 'sideV'>
+  <div class="sb2">
+<a href="#" onclick="document.getElementById('test10').src='death.png'; return false;"><img src="HP.png" / class = 'sb3' id="test10"></a>
+<a href="#" onclick="document.getElementById('test11').src='death.png'; return false;"><img src="HP.png" / class = 'sb3' id="test11"></a>
+<a href="#" onclick="document.getElementById('test12').src='death.png'; return false;"><img src="HP.png" / class = 'sb3' id="test12"></a>
+<a href="#" onclick="document.getElementById('test13').src='death.png'; return false;"><img src="HP.png" / class = 'sb3' id="test13"></a>
+<a href="#" onclick="document.getElementById('test14').src='death.png'; return false;"><img src="HP.png" / class = 'sb3' id="test14"></a>
+<a href="#" onclick="document.getElementById('test15').src='death.png'; return false;"><img src="HP.png" / class = 'sb3' id="test15"></a>
+<a href="#" onclick="document.getElementById('test16').src='death.png'; return false;"><img src="HP.png" / class = 'sb3' id="test16"></a>
+<a href="#" onclick="document.getElementById('test17').src='death.png'; return false;"><img src="HP.png" / class = 'sb3' id="test17"></a>
+<a href="#" onclick="document.getElementById('test18').src='death.png'; return false;"><img src="HP.png" / class = 'sb3' id="test18"></a>
+<a href="#" onclick="document.getElementById('test19').src='death.png'; return false;"><img src="HP.png" / class = 'sb3' id="test19"></a>
+
+  </div>
+  </div>
+      </div>
+
+       <div class="CardBox">
+         <IMG src="card/1.jpg" name="random_img">
+       </div>
+</div>
+   <div class='menu'>
+      <a href="#open"><img src = 'menu01_on.png' class="sb"/></a>
+          <div class="white_content" id="open">
+              <div>
+                <a href="#close"><div class="cancle" ></div></a>
+                 <div class="modals2"></div>
+                <div ondragover="return false;" ondragenter="return false;" ondrop="drop(this, event);" class="modals">
+                  <img src="shop/shop1.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag1">
+                  <img src="shop/shop2.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag2">
+                  <img src="shop/shop3.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag3">
+                  <img src="shop/shop4.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag4">
+                  <img src="shop/shop5.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag5">
+                  <img src="shop/shop15.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag6">
+                  <img src="shop/shop7.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag7">
+                  <img src="shop/shop8.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag8">
+                  <img src="shop/shop9.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag9">
+                  <img src="shop/shop10.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag10">
+                  <img src="shop/shop11.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag11">
+                  <img src="shop/shop12.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag12">
+                  <img src="shop/shop13.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag13">
+                  <img src="shop/shop14.png" class="icon" draggable="true" ondragstart="drag(this, event)" id="drag14">
+                </div>
+                <div ondrop="drop(this, event);" ondragenter="return false;" ondragover="return false;" class="modals">
+                </div>
+
+              </div>
+          </div>
+   </div>
+</body>
+</html>
